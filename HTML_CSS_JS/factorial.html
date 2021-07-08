@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>all javascript assignments</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        .fact{
+            /*text-align: center;*/
+            font-size:15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+<div  class="fact">
+    <h3> Factorial of a number </h3>
+Enter a number: <input id = "num" type="number" placeholder="Enter any number" >
+<br><br>
+<button onclick = "fact()"> Factorial </button>
+<p id = "res"></p>
+</div>
+</div>
+
+
+
+ 
+</div>
+</div>
+</section>
+
+<script>
+    
+    function fact(){
+var i;
+var num;
+var f=1;
+num = document.getElementById("num").value;
+for(var i = num; i >=1; i--)  
+{
+    
+f = f * i;
+}
+
+document.getElementById("res").innerHTML = "The factorial of the number " + num + " is: " + f ;
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+<style type="text/css">
+	.cal{
+		margin-top: 200px;
+	}
+</style>
+</head>
+<body style="text-align: center;">
+
+	<section class="cal">
+	<label>Enter first number</label>
+<input type="text" id="n1"/><br/><br/>
+<label>Enter second number</label>
+        <input type="text" id="n2"/><br/><br/>
+        
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+        </select>
+        
+        <button onclick="calc();">=</button>
+        <input type="text" id="result"/>
+
+</section>
+     <script src="js/cal.js"></script>
+</body>
+</html>

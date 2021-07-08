@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="text-align: center; margin-top: 200px;">
+	<h1>Reverse of given number</h1>
+<form id="form">
+<input type="text" name="" id="number">
+<input type="submit" name="check">
+</form>
+<p id="result"></p>
+
+
+
+
+
+<script type="text/javascript">
+	var frm=document.getElementById("form");
+
+	frm.onsubmit=function(){
+		var user =document.getElementById("number").value;
+		var preview=document.getElementById("result");
+		var i,rev=0;
+		while(user !=0){
+			rev=(rev*10)+(user%10);
+			user=parseInt(user/10);
+
+		}
+		preview.innerHTML=rev;
+		return false;
+	}
+</script>
+</body>
+</html>

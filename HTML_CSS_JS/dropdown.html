@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+	<input type="text" name="num1" id="num1">
+	<input type="submit" name="add value to dropdown" onclick="return addvaluelist();">
+</form><br><br>
+<select id=dropdown>
+	
+</select>
+<script type="text/javascript">
+	var selectdropdown= document.getElementById('dropdown');
+	for(i=1; i<=10; i++){
+		var option1=document.createElement("option");
+		option1.text =i;
+		option1.value=i;
+		selectdropdown.add(option1);
+	}
+
+	function addvaluelist() {
+		var item= document.getElementById('num1').value;
+		var option= document.createElement("option");
+		option.text=item;
+		option.value=item;
+		document.getElementById('dropdown').add(option);
+		return false;
+	}
+</script>
+</body>
+</html>

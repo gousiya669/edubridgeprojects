@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title is used to display text/title on the Browser Window -->
+        <title>
+            Welcome
+        </title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="img/edubridge_logo.png" 
+            alt="This will appear when image is not available"
+            title="Edubridge Logo"/>
+            </div>
+
+            <nav>
+                <!--<ol type="a">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                </ol> -->
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+        </header>
+        <!-- H1 is the Maximum Sized Heading Tag -->
+        <h1>Welcome to Edubridge!</h1>
+        <!-- P is used to create Paragraphs and if I want to mark any of the 
+            words/statement in bold or italiic, use STRONG and EM respectively -->
+            <!--To add links, use anchor, A tag with it's attribute HREF-->
+        <p>We are here to learning <strong>interesting<!-- Even this should be ok, 
+            you can add me anywhere--></strong> <em>technologies</em> and also
+        we will learn to upload our projects on <a href="https://github.com">GitHub</a>.</p>
+        We will now start <strong><em>learning HTML5.</em></strong>
+
+        <section>
+        <h3>Let's start creating FORMS in HTML5</h3>
+
+        <form action="html/success.html" method="POST">
+            <strong><label> First Name:</label></strong>
+            <!--type TEXT is used to display textbox-->
+            <input type="text" id="firstName" name="firstName"/>
+            <br/><br/>
+
+            <label>Last Name: </label>
+            <input type="text" id="lastName" name="lastName"/>
+            <br/><br/>
+            <label>Date of Birth: </label>
+            <!--type DATE is used to display date picker-->
+            <input type="date" id="dateOfBirth" name="dateOfBirth"/>
+            <br/><br/>
+
+            <label>Select Gender:</label><br/>
+            <!--type RADIO is used to allow user to select only one choice from the given list-->
+            <input type="radio" id="gender" name="gender" value="male"/>
+            <label>Male</label>
+
+            <input type="radio" id="gender" name="gender" value="female"/>
+            <label>Female</label>
+
+            <input type="radio" id="gender" name="gender" value="other"/>
+            <label>Other</label>
+            <br/><br/>
+
+            <label>Select All your fav fruits:</label><br/>
+            <!--type CHECKBOX allows user to select Multiple options-->
+            <input type="checkbox" id="fruits" name="fruits" value="apple"/>
+            <label>Apple</label><br/>
+
+            <input type="checkbox" id="fruits" name="fruits" value="mango"/>
+            <label>Mango</label><br/>
+
+            <input type="checkbox" id="fruits" name="fruits" value="banana"/>
+            <label>Banana</label><br/><br/>
+
+
+            <label>Select your Fav Language:</label>
+            <!--SELECT is used to display Drop Down list-->
+            <select id="favLang">
+                <option value="all">All</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="cplus">C++</option>
+                <option value="none">None</option>
+            </select> <br/><br/>
+
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Clear"/>
+        </form>
+    </section>
+
+        <br/><br/>
+        <hr/>
+        <footer style="background-color: lightgrey;">
+            Copyright &copy; 2021, this page is created by Azmina.
+        </footer>
+        
+    </body>
+</html>
