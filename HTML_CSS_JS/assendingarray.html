@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sort Numeric Array Correctly in JavaScript</title>
+</head>
+<body style="text-align: center;">
+
+    <h1>sorting of elements ascending order</h1>
+    <script>
+    var numbers = [3, 5, 4, 2, 1];
+     
+
+    
+     
+    /* Sorting the numbers array numerically in ascending order
+    using the sort method and a compare function */
+    numbers.sort(function(a, b){
+        return a - b;
+    });
+    document.write(numbers); // Outputs: 1,3,5,7,9,12,15
+    </script>
+</body>
+</html>
