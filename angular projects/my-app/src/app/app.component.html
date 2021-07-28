@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+
+<h2>welcome to my apps</h2>
+{{title}}
+<br>
+Occupation:{{Occupation}}
+<app-footer></app-footer>
+<p>Two wany binding example</p>
+<input type="text" name="username" [(ngModel)]='username'/>
+<p>username:{{username}}</p>
+<button (click)='clearvalue()' class="btn btn-primary">Clear</button>
