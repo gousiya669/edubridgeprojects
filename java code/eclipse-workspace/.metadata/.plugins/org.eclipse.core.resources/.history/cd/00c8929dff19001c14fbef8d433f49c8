@@ -1,0 +1,49 @@
+package com.edubridge.hibernate.main;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+
+import com.edubridge.hibernate.dao.CourseDao_EM;
+import com.edubridge.hibernate.dao.StudentDao;
+import com.edubridge.hibernate.entities.Student;
+
+
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+	StudentDao studentDao= new StudentDao();	
+	Student student = new Student ();
+	CourseDao_EM courseDao=new CourseDao_EM();
+	
+	 student.setStudentId(18);
+	 student.setStudentName("gousiya22");
+	 student.setMarks(55);
+	// student.setCourseId("C003");
+	 student.setCourse(courseDao.getCourseById("C004"));
+	 
+	 try {
+		student.setDateOfBirth(new SimpleDateFormat("dd/MM/yyyy").parse("01/03/2020"));
+	} catch (ParseException e) {
+		
+		e.printStackTrace();
+	}
+		
+		
+//StudentDao studentDao = new StudentDao();
+   studentDao.saveStudent(student);
+
+     //studentDao.updateStudent(student);
+
+List<Student> studentList = studentDao.getAllStudents();
+      studentList.forEach(s ->
+          System.out.println(s.getStudentId()+" "+s.getStudentName()+" "+s.getCourse().getCourseName())
+   
+		);
+
+	}
+
+}

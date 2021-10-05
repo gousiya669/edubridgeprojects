@@ -1,0 +1,18 @@
+package com.edubridge.hibernate.main;
+
+import java.util.List;
+import com.edubridge.hibernate.dao.CourseDao;
+import com.edubridge.hibernate.entities.Course;
+
+public class CourseMain {
+
+	public static void main(String[] args) {
+		CourseDao courseDao = new CourseDao();
+		List<Course> courseList = courseDao.getAllCourses();
+		
+		courseList.forEach(c ->
+		System.out.println(c.getCourse_id() +" "+ c.getCourse_name())
+				);
+	}
+	
+}

@@ -1,0 +1,57 @@
+package com.edubridge.hibernate.dao.test;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.edubridge.hibernate.dao.StudentDao;
+import com.edubridge.hibernate.entities.Student;
+
+
+
+public class TestStudentDao {
+	
+	@Test
+	void testGetAllStudentByNameGousiya() {
+		StudentDao studentDao = new StudentDao();
+		List<Student> studentList = studentDao.getAllStudentByNameGousiya();
+		studentList.forEach(s->
+					System.out.println(s.getStudentId()+" "+s.getStudentName())
+				);
+	}
+	@Test
+	void testGetAllStudentByCharStartWithA() {
+		StudentDao studentDao = new StudentDao();
+		List<Student> studentList = studentDao.getAllStudentByCharStartWithA('G');
+		studentList.forEach(s->
+					System.out.println(s.getStudentId()+" "+s.getStudentName())
+				);
+	}
+	
+	@Test
+	void testGetAllStudentByName() {
+		StudentDao studentDao = new StudentDao();
+		List<Student> studentList = studentDao.getAllStudentByName("Arun");
+		studentList.forEach(s->
+					System.out.println(s.getStudentId()+" "+s.getStudentName()+" "+s.getCourse().getCourseName())
+				);
+	}
+	
+	@Test
+	void testGetAllStudentByMarks() {
+		StudentDao studentDao = new StudentDao();
+		List<Student> studentList = studentDao.getAllStudentByMarks(80);
+		studentList.forEach(s->
+					System.out.println(s.getStudentId()+" "+s.getStudentName())
+				);
+	}
+	
+	@Test
+	void testGetAllStudentByCourse() {
+		StudentDao studentDao = new StudentDao();
+		List<Student> studentList = studentDao.getAllStudentByCourse("html");
+		studentList.forEach(s->
+					System.out.println(s.getStudentId()+" "+s.getStudentName())
+				);
+	}
+}

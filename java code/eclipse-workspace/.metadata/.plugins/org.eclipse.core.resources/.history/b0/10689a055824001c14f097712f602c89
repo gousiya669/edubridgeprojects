@@ -1,0 +1,35 @@
+package com.shoppingmart.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "mybooking")
+public class MyBooking {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Column (name = "bkg_id")
+	private int bkgid;
+	
+	@Column (name = "product_name")
+	private String productname;
+	
+	@Column (name = "mobile_number")
+	private int mobilenumber;
+	
+	@Column (name = "bkg_address")
+	private String address;
+	
+	@Column (name = "bkg_ammount")
+	private int ammount;
+	
+	@Column (name = "shipping_progess")
+	private String shippingprogess;
+
+	
+}

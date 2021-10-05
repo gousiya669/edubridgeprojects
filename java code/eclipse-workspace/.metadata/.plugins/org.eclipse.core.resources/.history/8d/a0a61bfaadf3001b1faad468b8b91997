@@ -1,0 +1,10 @@
+package com.edubridge.arrays;
+
+public class duplicate_elemts {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.shoppingmart.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.edubridge.springboot.data.exceptions.RecordNotFoundException;
+import com.shoppingmart.entities.MyBooking;
+import com.shoppingmart.repository.MyBookingRepository;
+
+
+@Service
+public class MyBookingServiceImpl implements MyBookingService {
+	@Autowired
+	MyBookingRepository mybookingrepo;
+	@Override
+	public MyBooking saveMyBooking(MyBooking mybooking) {
+		// TODO Auto-generated method stub
+		return mybookingrepo.save(mybooking);
+	}
+
+	@Override
+	public List<MyBooking> getAllMyBookings() {
+		// TODO Auto-generated method stub
+		return mybookingrepo.findAll();
+	}
+
+	@Override
+	public MyBooking getMyBookingById(int bkgid) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		return mybookingrepo.findById(bkgid)
+				.orElseThrow(() -> new RecordNotFoundException("Booking with ID"+bkgid+" not found"));
+		
+	}
+
+	@Override
+	public void deleteMyBookingById(int bkgid) {
+		// TODO Auto-generated method stub
+		mybookingrepo.deleteById(bkgid);
+		
+	}
+
+}

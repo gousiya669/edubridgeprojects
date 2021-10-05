@@ -1,0 +1,15 @@
+package com.shoppingmart.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.shoppingmart.service.MyProfileService;
+
+
+@RestController
+public class MyProfileController {
+
+	
+	@Autowired
+	MyProfileService myprofileservice;
+}

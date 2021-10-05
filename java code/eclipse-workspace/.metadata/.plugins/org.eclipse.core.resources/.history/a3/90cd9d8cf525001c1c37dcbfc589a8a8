@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8"/>
+<title>Edit Department</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<style>
+input {
+    width: 50%;
+}
+</style>
+</head>
+<body>
+   
+  
+  
+  
+  
+  
+  
+  
+  <section>
+ <div class="container">
+ 
+
+<h3 class="text-center mb-3 ">EDIT MYPROFILE </h3>
+
+
+
+
+
+ <form action="#" th:action="@{/saveprofile}" th:object="${myprofile}"
+method="post">
+
+ 
+  
+           <label class="form-label">myprofile ID:</label>
+   
+    <input type="text" th:field="*{regid}" readonly="readonly" class="form-control"/>
+            
+            
+         
+            <label class="form-label">regid:</label><input type="text" th:field="*{regid}"  class="form-control"/>   </br>
+         
+           
+            <label class="form-label">firstname</label><input type="text" th:field="*{firstname}"  class="form-control"/></br>
+           
+            <label class="form-label">lastname</label><input type="text" th:field="*{lastname}" class="form-control" /></br>
+           
+            <label class="form-label">email</label><input type="email" th:field="*{email}"  class="form-control"/></br>
+           
+            <label class="form-label">mobilenumber</label><input type="number" th:field="*{mobilenumbers}" class="form-control" /></br>
+            
+            <label class="form-label">gender</label><input type="text" th:field="*{gender}" class="form-control" /></br>
+            
+             <label class="form-label">address</label><input type="text" th:field="*{address}" class="form-control" /></br>
+           
+            <label class="form-label">postalcode</label><input type="number" th:field="*{postalcode}" class="form-control" /></br>
+           
+           
+           
+           
+
+
+<div class="btnsub text-center">
+ <button type="submit" class="btn btn-primary">Save</button>
+</div>
+            </form>
+</div>
+
+
+</section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+</body>
+</html>

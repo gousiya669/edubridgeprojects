@@ -1,0 +1,26 @@
+package com.edubridge.springboot.hello.hello.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+
+
+public class CalculatorController {
+	
+	
+
+	@GetMapping("/calc/additionrp")
+	public String addition(@RequestParam(name="num1") int num1, @RequestParam(name="num2") int num2) {
+		return "Addition is:"+ (num1+num2);
+	}
+	@GetMapping("/calc/additionpv/{num1}/{num2}")
+	public String additionpv(@PathVariable int num1,@PathVariable int num2) {
+		return "Addition is:"+ (num1+num2);
+	}
+	
+	
+	
+}

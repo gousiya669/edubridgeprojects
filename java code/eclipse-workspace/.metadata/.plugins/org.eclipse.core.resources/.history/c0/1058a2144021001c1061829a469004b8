@@ -1,0 +1,5 @@
+package com.shoppingmart.repository;
+
+public class MyBookingRepository {
+
+}

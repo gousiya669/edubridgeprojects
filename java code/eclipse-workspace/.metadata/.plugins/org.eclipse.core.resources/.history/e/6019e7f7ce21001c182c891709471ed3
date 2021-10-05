@@ -1,0 +1,23 @@
+package com.shoppingmart.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.shoppingmart.entities.MyBooking;
+import com.shoppingmart.service.MyBookingService;
+
+public class MyBookingViewController {
+	@Autowired
+	MyBookingService mybookingservice;
+	
+	
+	@RequestMapping("/")
+	public String viewHomePage(Model model) {
+		List<MyBooking> mybookingList = mybookingservice.getAllMyBookings();
+		model.addAttribute("departmentList", departmentList);
+		return "index";
+	}
+}

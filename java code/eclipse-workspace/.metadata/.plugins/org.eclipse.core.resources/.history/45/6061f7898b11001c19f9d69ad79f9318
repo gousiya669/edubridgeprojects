@@ -1,0 +1,16 @@
+package com.edubridge.hibernate.main;
+
+
+
+public class CourseMain {
+
+	public static void main(String[] args) {
+		CourseDao courseDao = new CourseDao();
+		List<Course> courseList = courseDao.getAllCourses();
+		
+		courseList.forEach(c ->
+		System.out.println(c.getCourse_id() +" "+ c.getCourse_name())
+				);
+	}
+	
+}

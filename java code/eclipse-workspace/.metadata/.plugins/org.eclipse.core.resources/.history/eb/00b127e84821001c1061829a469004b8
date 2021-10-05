@@ -1,0 +1,8 @@
+package com.shoppingmart.repository;
+
+
+@Repository
+public interface MyBookingRepository extends JpaRepository< MyBooking, Integer> {
+
+}
+

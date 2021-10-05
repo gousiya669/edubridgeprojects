@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.repository.MyBookingRepository"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.service.MyBookingService"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.entities.MyBooking"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="com.edubridge.springboot.placementmanagement.service.StudentAttendanceService"/>
+    <fullyQualifiedTypeName name="com.edubridge.springboot.placementmanagement.entities.StudentAttendance"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.repository.MyProfileRepository"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.service.MyProfileService"/>
+    <fullyQualifiedTypeName name="com.shoppingmart.entities.MyProfile"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,18 @@
+package com.shoppingmart.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shoppingmart.entities.MyProfile;
+import com.shoppingmart.repository.MyProfileRepository;
+
+
+
+@Service
+public class MyProfileServiceImpl implements MyProfileService {
+	@Autowired
+	MyProfileRepository myprofilerepo;
+	
+}

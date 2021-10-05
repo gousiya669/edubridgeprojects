@@ -1,0 +1,5 @@
+package com.edubridge.hello.spring.beans;
+
+public class Addition {
+
+}

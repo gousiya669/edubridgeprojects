@@ -1,0 +1,5 @@
+package com.shoppingmart.config;
+
+public class SecurityConfiguration {
+
+}

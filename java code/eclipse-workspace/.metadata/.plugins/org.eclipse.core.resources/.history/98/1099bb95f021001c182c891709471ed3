@@ -1,0 +1,60 @@
+package com.shoppingmart.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.edubridge.springboot.data.entities.Department;
+import com.shoppingmart.entities.MyBooking;
+import com.shoppingmart.service.MyBookingService;
+@Controller
+public class MyBookingViewController {
+	@Autowired
+	MyBookingService mybookingservice;
+	
+	
+	@RequestMapping("/")
+	public String viewHomePage(Model model) {
+		List<MyBooking> mybookingList = mybookingservice.getAllMyBookings();
+		model.addAttribute("mybookingList", mybookingList);
+		return "index";
+	}
+	@RequestMapping("/new")
+	public String showNewMyBookingPage(Model model) {
+		MyBooking mybooking = new MyBooking();
+		model.addAttribute("department", mybooking);
+		return "new_MyBooking";
+	}
+	
+	
+	
+	
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public String saveMyBooking(@ModelAttribute("mybooking") MyBooking mybooking) {
+		mybookingservice.saveMyBooking(mybooking);
+		return "redirect:/";
+	}
+	
+	
+	
+	
+	@RequestMapping("/edit/{id}")
+	public ModelAndView showEditMyBookingPage(@PathVariable(name="id") int deptId) {
+		 ModelAndView mav=new  ModelAndView("edit_depaartment");
+		 MyBooking department =mybookingservice.getMyBookingById(bkgid);
+		 mav.addObject("department", department);
+		 return mav;
+		 
+		 }
+	
+	
+	
+	
+}

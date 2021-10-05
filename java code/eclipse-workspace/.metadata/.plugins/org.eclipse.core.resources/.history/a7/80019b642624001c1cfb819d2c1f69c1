@@ -1,0 +1,173 @@
+package com.shoppingmart.entities;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table (name = "myprofile")
+public class MyProfile {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Column (name = "rg_id")
+	private String rgid;
+	
+	@Column (name = "first_name")
+	private String firstname;
+	
+	@Column (name = "Last_name")
+	private String Lastname;
+	
+	@Column (name = "Number")
+	private long Number;
+	
+	private Date Dob;
+	
+	private String Gender;
+	
+	private String Address;
+	
+	private int age;
+
+	public String getRgid() {
+		return rgid;
+	}
+
+	public void setRgid(String rgid) {
+		this.rgid = rgid;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return Lastname;
+	}
+
+	public void setLastname(String lastname) {
+		Lastname = lastname;
+	}
+
+	public long getNumber() {
+		return Number;
+	}
+
+	public void setNumber(long number) {
+		Number = number;
+	}
+
+	public Date getDob() {
+		return Dob;
+	}
+
+	public void setDob(Date dob) {
+		Dob = dob;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Address == null) ? 0 : Address.hashCode());
+		result = prime * result + ((Dob == null) ? 0 : Dob.hashCode());
+		result = prime * result + ((Gender == null) ? 0 : Gender.hashCode());
+		result = prime * result + ((Lastname == null) ? 0 : Lastname.hashCode());
+		result = prime * result + (int) (Number ^ (Number >>> 32));
+		result = prime * result + age;
+		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
+		result = prime * result + ((rgid == null) ? 0 : rgid.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MyProfile other = (MyProfile) obj;
+		if (Address == null) {
+			if (other.Address != null)
+				return false;
+		} else if (!Address.equals(other.Address))
+			return false;
+		if (Dob == null) {
+			if (other.Dob != null)
+				return false;
+		} else if (!Dob.equals(other.Dob))
+			return false;
+		if (Gender == null) {
+			if (other.Gender != null)
+				return false;
+		} else if (!Gender.equals(other.Gender))
+			return false;
+		if (Lastname == null) {
+			if (other.Lastname != null)
+				return false;
+		} else if (!Lastname.equals(other.Lastname))
+			return false;
+		if (Number != other.Number)
+			return false;
+		if (age != other.age)
+			return false;
+		if (firstname == null) {
+			if (other.firstname != null)
+				return false;
+		} else if (!firstname.equals(other.firstname))
+			return false;
+		if (rgid == null) {
+			if (other.rgid != null)
+				return false;
+		} else if (!rgid.equals(other.rgid))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "MyProfile [rgid=" + rgid + ", firstname=" + firstname + ", Lastname=" + Lastname + ", Number=" + Number
+				+ ", Dob=" + Dob + ", Gender=" + Gender + ", Address=" + Address + ", age=" + age + "]";
+	}
+	
+	
+    
+}

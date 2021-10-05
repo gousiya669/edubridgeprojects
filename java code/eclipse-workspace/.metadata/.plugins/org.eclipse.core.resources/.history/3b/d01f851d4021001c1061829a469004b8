@@ -1,0 +1,14 @@
+package com.shoppingmart.repository;
+
+public interface MyBookingRepository extends JpaRepository<Mybooking, Integer> {
+
+}
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.edubridge.springboot.data.entities.Department;
+
+@Repository
+public interface DepartmentRepository extends JpaRepository<Department, Integer> {
+
+}

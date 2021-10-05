@@ -1,0 +1,9 @@
+package com.shoppingmart.service;
+
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class MyBookingServiceImpl implements MyBookingService {
+
+}

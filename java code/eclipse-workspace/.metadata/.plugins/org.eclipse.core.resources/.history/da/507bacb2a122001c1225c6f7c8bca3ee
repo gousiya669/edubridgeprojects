@@ -1,0 +1,5 @@
+package com.shoppingmart.controller.dto;
+
+public class UserRegistrationDto {
+
+}

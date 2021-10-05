@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Edit Department</title>
+</head>
+<body>
+    <div align="center">
+    <h1>Edit MyProfile</h1>
+  <br/>
+<form action="#" th:action="@{/save}" th:object="${myprofile}"
+method="post">
+
+<table border="0" cellpadding="10">
+<tr>
+<td>Department ID:</td>
+<td>
+<input type="text" th:field="*{bkgid}" readonly="readonly"/>
+</td>
+</tr>
+<tr>
+           
+
+<tr>
+					<td> productname</td>
+					<td><input type="text" th:field="*{productname}" /></td>
+				</tr>
+				<tr>
+					<td>mobilenumber</td>
+					<td><input type="number" th:field="*{mobilenumber}" /></td>
+				</tr>
+				<tr>
+					<td>address</td>
+					<td><input type="text" th:field="*{address}" /></td>
+				</tr>
+				<tr>
+					<td>ammount</td>
+					<td><input type="number" th:field="*{ammount}" /></td>
+				</tr>
+				<tr>
+					<td>shippingprogess</td>
+					<td><input type="text" th:field="*{shippingprogess}" /></td>
+				</tr>
+						
+
+
+
+
+
+
+
+
+
+
+</tr>
+<td colspan="2"><button type="submit">Save</button></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

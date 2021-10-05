@@ -1,0 +1,10 @@
+package com.shoppingmart.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.shoppingmart.controller.dto.UserRegistrationDto;
+import com.shoppingmart.entities.User;
+
+public interface UserService extends UserDetailsService{
+	 User save(UserRegistrationDto registrationDto);
+	}

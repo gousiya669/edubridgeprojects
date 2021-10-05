@@ -1,0 +1,44 @@
+package com.shoppingmart.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shoppingmart.entities.MyProfile;
+import com.shoppingmart.repository.MyProfileRepository;
+
+
+
+@Service
+public class MyProfileServiceImpl implements MyProfileService {
+	@Autowired
+	MyProfileRepository myprofilerepo;
+	@Override
+	public MyProfile saveMyProfile(MyProfile myprofile) {
+		// TODO Auto-generated method stub
+		return myprofilerepo.save(myprofile);
+	}
+
+	@Override
+	public List<MyProfile> getAllMyBookings() {
+		// TODO Auto-generated method stub
+		return myprofilerepo.findAll();
+	}
+
+	@Override
+	public MyProfile getMyBookingById(int bkgid) {
+		// TODO Auto-generated method stub
+		return myprofilerepo.findById(bkgid).get();
+		
+	}
+
+	@Override
+	public void deleteMyProfileById(int bkgid) {
+		// TODO Auto-generated method stub
+		myprofilerepo.deleteById(bkgid);
+		
+	}
+
+
+}

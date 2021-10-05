@@ -1,0 +1,32 @@
+package com.shoppingmart.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.edubridge.springboot.data.entities.Department;
+import com.shoppingmart.entities.MyBooking;
+import com.shoppingmart.service.MyBookingService;
+
+
+
+@RestController
+public class MyBookingController {
+
+	@Autowired
+	MyBookingService mybookingservice;
+	
+	@PostMapping("/booking/add")
+	public MyBooking saveMyBooking(@RequestBody MyBooking mybooking) {
+		return mybookingservice.saveMyBooking(mybooking);
+	}
+	
+	@GetMapping("/booking/allbookings")
+	public List<MyBooking> getAllMyBooking(){
+		return mybookingservice.getAllMyBookings();
+	}
+}

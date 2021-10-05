@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Shopping mart</title>
+</head>
+<body>
+<div align="center">
+    <h1>My Bookings</h1>
+    <a href="/new">Order new things</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Booking id</th>
+                <th>Product Name</th>
+                <th>Mobile number</th>
+                 <th>Address</th>
+                <th>Ammount</th>
+               
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="mybooking : ${mybookingList}">
+            	<td th:text="${mybooking.bkgid}">Department ID</td>
+                <td th:text="${mybooking.productname}"> product Name</td>
+                <td th:text="${mybooking.mobilenumber}">Mobilenumber</td>
+                <td th:text="${mybooking.address}"> address</td>
+                <td th:text="${mybooking.ammount}">Ammount</td>
+                <td th:text="${mybooking.shippingprogess}">Shipping progess</td>
+                 
+               <td>
+                	
+                	<a th:href="@{/delete/{id}(id=${mybooking.bkgid})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>

@@ -1,0 +1,10 @@
+package com.edubridge.springboot.hello.hello.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class GousiyaSpringBootController {
+	@RequestMapping("gousiya")
+	public String gousiya() {
+		return "hellow,Gousiya";
+	}
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Shopping mart</title>
+</head>
+<body>
+<div align="center">
+    <h1>My Bookings</h1>
+    <a href="/new">Order new things</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Booking id</th>
+                <th>Product Name</th>
+                <th>Mobile number</th>
+                <th>Ammount</th>
+                <th>Address</th>
+                <th>Shipping progess</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="mybooking : ${mybookingList}">
+            	<td th:text="${mybooking.bkgid}">Department ID</td>
+                <td th:text="${mybooking.productname}"> product Name</td>
+                <td th:text="${mybooking.mobilenumber}">Mobilenumber</td>
+                <td th:text="${mybooking.address}"> address</td>
+                <td th:text="${mybooking.ammount}">Ammount</td>
+                <td th:text="${mybooking.shippingprogess}">Shipping progess</td>
+                 
+               <td>
+                	<a th:href="@{/edit/{id}(id=${mybooking.bkgid})}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{/delete/{id}(id=${mybooking.bkgid})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration and Login App</title>
+
+<link rel="stylesheet"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+ crossorigin="anonymous">
+
+</head>
+<body>
+ <!-- create navigation bar ( header) -->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed"
+     data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+     aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span> <span
+      class="icon-bar"></span> <span class="icon-bar"></span> <span
+      class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+     Login Module</a>
+   </div>
+   <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+     <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+
+ <br>
+ <br>
+
+ <div class="container">
+  <h1>Registration and Login with Spring Boot, Spring Security,
+   Thymeleaf, Hibernate and MySQL</h1>
+  Welcome <span sec:authentication="principal.username"> User</span>
+ </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+package com.shoppingmart.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.shoppingmart.entities.MyProfile;
+import com.shoppingmart.service.MyProfileService;
+
+
+
+@Controller
+public class MyProfileViewController {
+	@Autowired
+	MyProfileService myprofileservice;
+	
+	
+	@RequestMapping("/profile")
+	public String viewHomePage(Model model) {
+		List<MyProfile> myprofileList = myprofileservice.getAllMyProfiles();
+		model.addAttribute("myprofileList", myprofileList);
+		return "profile.html";
+	}
+	
+}

@@ -1,0 +1,18 @@
+package com.shoppingmart.service;
+
+import java.util.List;
+
+import com.shoppingmart.entities.MyBooking;
+
+
+
+public interface MyProfileService {
+public MyBooking saveMyProfile(MyProfile mybooking);
+	
+	public List<MyProfile> getAllMyBookings();
+	
+	public MyProfile getMyBookingById(int bkgid);
+	
+	public void deleteMyBookingById(int bkgid);
+
+}

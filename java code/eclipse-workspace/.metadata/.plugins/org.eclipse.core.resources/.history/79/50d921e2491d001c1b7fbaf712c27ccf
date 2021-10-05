@@ -1,0 +1,5 @@
+package com.edubridge.springboot.hello.hello.service;
+
+public interface CalculatorService {
+
+}

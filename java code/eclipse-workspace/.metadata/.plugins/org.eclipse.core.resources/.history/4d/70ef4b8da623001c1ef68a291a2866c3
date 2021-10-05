@@ -1,0 +1,120 @@
+package com.shoppingmart.entities;
+
+import java.sql.Date;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "myprofile")
+public class MyProfile {
+	@Id
+	@Column(name = "registrationid")
+	private int RegistrationId;
+	@Column(name = "fullname")
+	private String FullName;
+	@Column(name = "emailid")
+	private String EmailId;
+	@Column(name = "phnumber")
+	private long PhNumber;
+	@Column(name = "dob")
+	private Date dob;
+	@Column(name = "gender")
+	private String Gender;
+	//password
+	@Column(name = "address")
+	private String Address;
+	
+	
+	
+
+	@Column(name = "hobbies")
+	private String Hobbies;
+public MyProfile() {}
+public int getRegistrationId() {
+	return RegistrationId;
+}
+public void setRegistrationId(int registrationId) {
+	RegistrationId = registrationId;
+}
+public String getFullName() {
+	return FullName;
+}
+public void setFullName(String fullName) {
+	FullName = fullName;
+}
+public String getEmailId() {
+	return EmailId;
+}
+public void setEmailId(String emailId) {
+	EmailId = emailId;
+}
+public long getPhNumber() {
+	return PhNumber;
+}
+public void setPhNumber(long phNumber) {
+	PhNumber = phNumber;
+}
+public Date getDob() {
+	return dob;
+}
+public void setDob(Date dob) {
+	this.dob = dob;
+}
+public String getGender() {
+	return Gender;
+}
+public void setGender(String gender) {
+	Gender = gender;
+}
+public String getAddress() {
+	return Address;
+}
+public void setAddress(String address) {
+	Address = address;
+}
+
+public String getHobbies() {
+	return Hobbies;
+}
+public void setHobbies(String hobbies) {
+	Hobbies = hobbies;
+}
+@Override
+public int hashCode() {
+	return Objects.hash(Address, EmailId, FullName, Gender, Hobbies, PhNumber,  RegistrationId, dob);
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	MyProfile other = (MyProfile) obj;
+	return Objects.equals(Address, other.Address) && Objects.equals(EmailId, other.EmailId)
+			&& Objects.equals(FullName, other.FullName) && Objects.equals(Gender, other.Gender)
+			&& Objects.equals(Hobbies, other.Hobbies) && PhNumber == other.PhNumber
+		&& RegistrationId == other.RegistrationId
+			
+			 && Objects.equals(dob, other.dob);
+}
+@Override
+public String toString() {
+	return "MyProfile [RegistrationId=" + RegistrationId + ", FullName=" + FullName + ", EmailId=" + EmailId
+			+ ", PhNumber=" + PhNumber + ", dob=" + dob + ", Gender=" + Gender + ", Address=" + Address + ", Hobbies="
+			+ Hobbies + "]";
+}
+
+	
+	
+	
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Student Attendance</title>
+</head>
+<body>
+<div align="center">
+    <h1>Student Attendance List</h1>
+    <a href="/new">Create New Student</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+              <th>StudId</th>
+                <th>StudName</th>
+                <th>CourseName</th>
+                <th>MarkRegister</th>
+                <th>TotalDays</th>
+                <th>NoOfDaysPresent</th>
+                <th>NoOfDaysAbsent</th>
+                <th>TotalPerc</th>
+                <th>Actions</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+           
+             <tr th:each="student_attendance : ${student_attendanceList}">
+            	<td th:text="${student_attendance.studId}"> STUD ID</td>
+                <td th:text="${student_attendance.studName}">STUD NAME</td>
+                <td th:text="${student_attendance.courseName}">COURSE NAME</td>
+                <td th:text="${student_attendance.markRegister}">MARK REGISTER</td>
+                <td th:text="${student_attendance.totalDays}">TOTAL DAYS</td>
+                <td th:text="${student_attendance.noOfDaysPresent}">NO_OF_DAYS_PRESENT</td>
+                <td th:text="${student_attendance.noOfDaysAbsen}">NO_OF_DAYS_ABSENT</td>
+                <td th:text="${student_attendance.totalPerc}">TotalPerc </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>

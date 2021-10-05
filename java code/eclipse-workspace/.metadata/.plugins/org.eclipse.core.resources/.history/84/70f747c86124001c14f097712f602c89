@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Edit Department</title>
+</head>
+<body>
+    <div align="center">
+    <h1>Edit MyProfile</h1>
+  <br/>
+<form action="#" th:action="@{/save}" th:object="${myprofile}"
+method="post">
+
+<table border="0" cellpadding="10">
+<tr>
+<td>myprofile ID:</td>
+<td>
+<input type="text" th:field="*{regid}" readonly="readonly"/>
+</td>
+</tr>
+<tr>
+           
+
+<tr>
+					<td> regid</td>
+					<td><input type="text" th:field="*{regid}" /></td>
+				</tr>
+				<tr>
+					<td>firstname</td>
+					<td><input type="text" th:field="*{firstname}" /></td>
+				</tr>
+				<tr>
+					<td>lastname</td>
+					<td><input type="text" th:field="*{lastname}" /></td>
+				</tr>
+				<tr>
+					<td>email</td>
+					<td><input type="text" th:field="*{email}" /></td>
+				</tr>
+				<tr>
+					<td>mobilenumber</td>
+					<td><input type="number" th:field="*{mobilenumber}" /></td>
+				</tr>
+				
+				<tr>
+					<td>gender</td>
+					<td><input type="text" th:field="*{gender}" /></td>
+				</tr>
+				<tr>
+					<td>address</td>
+					<td><input type="text" th:field="*{address}" /></td>
+				</tr>
+				
+				<tr>
+					<td>postalcode</td>
+					<td><input type="text" th:field="*{postalcode}" /></td>
+				</tr>
+						
+
+
+
+
+
+
+
+
+
+
+</tr>
+<td colspan="2"><button type="submit">Save</button></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

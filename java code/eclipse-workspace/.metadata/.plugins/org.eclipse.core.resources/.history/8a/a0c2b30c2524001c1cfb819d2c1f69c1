@@ -1,0 +1,13 @@
+package com.shoppingmart.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+
+public class MyProfileController {
+	
+	
+	@Autowired
+	MyBookingService mybookingservice;
+
+}

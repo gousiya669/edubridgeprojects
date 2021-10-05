@@ -1,0 +1,46 @@
+package com.shoppingmart.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import com.shoppingmart.entities.MyBooking;
+import com.shoppingmart.service.MyBookingService;
+
+
+
+@RestController
+public class MyBookingController {
+
+	@Autowired
+	MyBookingService mybookingservice;
+	
+	@PostMapping("/booking/add")
+	public MyBooking saveMyBooking(@RequestBody MyBooking mybooking) {
+		return mybookingservice.saveMyBooking(mybooking);
+	}
+	
+	@GetMapping("/booking/allbookings")
+	public List<MyBooking> getAllMyBooking(){
+		return mybookingservice.getAllMyBookings();
+	}
+	
+	@GetMapping("/booking/{bkgid}")
+	public MyBooking getDepartmentById(@PathVariable int bkgid) {
+		return mybookingservice.getMyBookingById(bkgid);
+	}
+	
+	@DeleteMapping("/booking/{bkgid}")
+	public String deleteDepartmentById(@PathVariable int bkgid) {
+		mybookingservice.deleteMyBookingById(bkgid);
+		return "Department Deleted";
+	}s
+	
+}

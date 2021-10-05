@@ -1,0 +1,42 @@
+package com.shoppingmart.entities;
+
+import java.sql.Date;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "myprofile")
+public class MyProfile {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	
+//	@Column(name = "registrationid")
+	private int RegistrationId;
+//	@Column(name = "fullname")
+	private String FullName;
+//	@Column(name = "emailid")
+	private String EmailId;
+//	@Column(name = "phnumber")
+	private long PhNumber;
+//	@Column(name = "dob")
+	private Date dob;
+//	@Column(name = "gender")
+	private String Gender;
+	//password
+//	@Column(name = "address")
+	private String Address;
+	
+//	@Column(name = "hobbies")
+	private String Hobbies;
+	
+	
+	
+}

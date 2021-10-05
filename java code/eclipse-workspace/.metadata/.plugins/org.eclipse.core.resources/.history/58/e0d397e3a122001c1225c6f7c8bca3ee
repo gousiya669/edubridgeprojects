@@ -1,0 +1,5 @@
+package com.shoppingmart.service;
+
+public interface UserService extends UserDetailsService{
+	 User save(UserRegistrationDto registrationDto);
+	}

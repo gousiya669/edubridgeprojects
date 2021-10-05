@@ -1,0 +1,31 @@
+package com.shoppingmart.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+public class MyBooking {
+	
+	private int bkgid;
+	
+
+	private String productname;
+	
+
+	private int mobilenumber;
+	
+	
+	private String address;
+	
+	
+	private int ammount;
+	
+	
+	private String shippingprogess;
+
+	
+}
